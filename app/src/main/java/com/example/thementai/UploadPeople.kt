@@ -18,7 +18,7 @@ class UploadPeople : AppCompatActivity() {
     private lateinit var detailEditText: EditText
     // Registers a photo picker activity launcher in multi-select mode.
     // In this example, the app lets the user select up to 10 media files.
-    private lateinit var pickMultipleMedia: ActivityResultLauncher<Array<String>>
+    //private lateinit var pickMultipleMedia: ActivityResultLauncher<Array<String>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
