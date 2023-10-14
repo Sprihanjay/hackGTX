@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,17 +24,72 @@
             android:background="@color/redColor"
             android:layout_below="@+id/buttonAddNew" />
 
+
+
+        <TextView
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="86dp"
+
+            android:layout_marginEnd="121dp"
+            android:text="Contact List"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
         <!-- 1 CardView -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_below="@+id/view"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="John Doe"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="john.doe@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 2 CardView -->
@@ -47,7 +103,39 @@
             android:layout_below="@+id/cardView"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
+
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Bob Smith"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="bob.smith@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 3 CardView -->
@@ -62,6 +150,37 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Charlie Brown"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="charlie.brown@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 4 CardView -->
@@ -76,6 +195,37 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="David Smith"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="david.smith@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 5 CardView -->
@@ -90,6 +240,37 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Eve Johnson"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="eve.johnson@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 6 CardView -->
@@ -104,6 +285,37 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Frank Miller"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="frank.miller@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 7 CardView -->
@@ -118,6 +330,37 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Grace Johnson"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="grace.johnson@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <!-- 8 CardView -->
@@ -132,7 +375,459 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
             <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Helen Smith"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="helen.smith@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
+
+        <!-- 9 CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView9"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView8"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Isabel Johnson"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="isabel.johnson@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 10 CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView10"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView9"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Jack Johnson"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="jack.johnson@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 11 CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView11"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView10"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Kate Smith"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="kate.smith@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 12 CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView12"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView11"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/contactName12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Liam Johnson"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/contactEmail12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="liam.johnson@example.com"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 13 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView13"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView12"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Continue with the rest of the cards, incrementing the id (e.g., cardView14, cardView15, etc.) -->
+
+        <!-- Card 14 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView14"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView13"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 15 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView15"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView14"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 16 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView16"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView15"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 17 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView17"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView16"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 18 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView18"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView17"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 19 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView19"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView18"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 20 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView20"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView19"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 21 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView21"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView20"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 22 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView22"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView21"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 23 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView23"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView22"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 24 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView24"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView23"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 25 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView25"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView24"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 26 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView26"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView25"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 27 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView27"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView26"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 28 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView28"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView27"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 29 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView29"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/cardView28"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+            <!-- Card Content Here -->
+        </androidx.cardview.widget.CardView>
+
 
     </RelativeLayout>
 
