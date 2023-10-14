@@ -13,8 +13,8 @@ class UploadPeople : AppCompatActivity() {
 
     // Registers a photo picker activity launcher in multi-select mode.
 // In this example, the app lets the user select up to 5 media files.
-    val pickMedia = registerForActivityResult(
-        ActivityResultContracts.PickVisualMedia()) { uri ->
+    val pickSingleMedia = registerForActivityResult(
+        ActivityResultContracts.GetContent()) { uri: Uri? ->
             // Callback is invoked after the user selects media items or closes the
             // photo picker.
             if (uri != null) {
@@ -30,13 +30,12 @@ class UploadPeople : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_people)
 
-        val pickPhotosButton = findViewById<Button>(R.id.choosePhotosButton)
+        val pickPhotoButton = findViewById<Button>(R.id.choosePhotosButton)
 
 //        // Set a click event listener for the button
-        pickPhotosButton.setOnClickListener {
-//            // Launch the multi-photo picker when the button is clicked
-//            // Launch the photo picker and let the user choose only images.
-            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo))
+        pickPhotoButton.setOnClickListener {
+//                // Launch the photo picker and let the user choose a single image.
+            pickSingleMedia.launch("image/*")
         }
     }
 }
