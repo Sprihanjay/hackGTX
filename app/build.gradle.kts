@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.thementai"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.thementai"
@@ -15,6 +15,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding=true
     }
 
     buildTypes {
@@ -45,8 +49,18 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    //CameraX
-    implementation("androidx.camera:camera-camera2:1.2.3")
-    implementation("androidx.camera:camera")
+    dependencies {
+        // CameraX core library using the camera2 implementation
+        val cameraxVersion = "1.4.0-alpha01"
+        implementation("androidx.camera:camera-core:${cameraxVersion}")
+        implementation("androidx.camera:camera-camera2:${cameraxVersion}")
+        implementation("androidx.camera:camera-lifecycle:${cameraxVersion}")
+        implementation("androidx.camera:camera-video:${cameraxVersion}")
+        implementation("androidx.camera:camera-view:${cameraxVersion}")
+        implementation("androidx.camera:camera-mlkit-vision:${cameraxVersion}")
+        implementation("androidx.camera:camera-extensions:${cameraxVersion}")
+        implementation("androidx.core:core-ktx:1.6.0")
+
+    }
 
 }
