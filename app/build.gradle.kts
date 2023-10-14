@@ -63,6 +63,10 @@ dependencies {
         implementation("androidx.camera:camera-extensions:${cameraxVersion}")
         implementation("androidx.core:core-ktx:1.6.0")
 
+        //Gallery Multipicker implementation
+        implementation("androidx.activity:activity:1.7.0")
+
+
     }
 
 }
