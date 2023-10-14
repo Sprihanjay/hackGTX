@@ -10,45 +10,69 @@
         android:id="@+id/camera"
         android:layout_width="255dp"
         android:layout_height="232dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
+        app:layout_constraintVertical_bias="0.41000003"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:text="This is Jake. Your son who cared for you whole life."
+        android:layout_width="293dp"
+        android:layout_height="120dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="This is Jake. Your son who cared for you whole life. His favorite sport is baseball and you enjoy watching baseball games with him on Sundays."
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.61" />
 
     <Button
         android:id="@+id/buttonAddPeople"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Add a new person"
+        android:layout_width="304dp"
+        android:layout_height="74dp"
+        android:backgroundTint="@color/redColor"
+        android:fontFamily="sans-serif"
+        android:text="Add Someone You Know"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintTop_toBottomOf="@+id/TakePicture"
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <Button
         android:id="@+id/TakePicture"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Identify someone else"
+        android:layout_width="294dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@color/redColor"
+        android:fontFamily="sans-serif"
+        android:text="Identify A Person"
+        android:textSize="20sp"
+        android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.852" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera"
+        app:layout_constraintVertical_bias="0.78" />
 </androidx.constraintlayout.widget.ConstraintLayout>
