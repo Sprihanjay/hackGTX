@@ -31,23 +31,4 @@ class ContactList : AppCompatActivity() {
         val intent = Intent(this, UploadPeople::class.java)
         startActivity(intent)
     }
-
-    @Composable
-    fun ContactCard(name: String, email: String) {
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            elevation = 8.dp
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp)
-            ) {
-                Text(text = name, color = Color.Black, fontSize = 18.sp)
-                Text(text = email, color = Color.Gray, fontSize = 14.sp)
-            }
-        }
-    }
 }
