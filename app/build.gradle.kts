@@ -41,6 +41,10 @@ android {
 
 dependencies {
 
+    implementation ("androidx.compose.ui:ui:1.0.3")
+    implementation ("androidx.compose.material:material:1.0.3")
+    implementation ("androidx.activity:activity-compose:1.3.1")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -62,6 +66,7 @@ dependencies {
         implementation("androidx.camera:camera-mlkit-vision:${cameraxVersion}")
         implementation("androidx.camera:camera-extensions:${cameraxVersion}")
         implementation("androidx.core:core-ktx:1.6.0")
+
 
     }
 
