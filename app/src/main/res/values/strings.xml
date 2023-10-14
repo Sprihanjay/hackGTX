@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TheMentAI</string>
+    <string name="upload_10_images_of_the_person_you_want_to_add">Upload 10 images of the person you want to add</string>
 </resources>
