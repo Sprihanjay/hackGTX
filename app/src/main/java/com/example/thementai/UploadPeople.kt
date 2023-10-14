@@ -15,7 +15,7 @@ class UploadPeople : AppCompatActivity() {
 // In this example, the app lets the user select up to 5 media files.
     val pickMultipleMedia = registerForActivityResult(
         ActivityResultContracts.PickMultipleVisualMedia(
-            5
+            10
         )
     ) { uris ->
             // Callback is invoked after the user selects media items or closes the
