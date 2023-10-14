@@ -1,24 +1,36 @@
 package com.example.thementai
-import com.google.firebase.database.FirebaseDatabase
 
+import android.net.Uri  // Required for handling URIs
 import android.os.Bundle
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
-import android.util.Log
 import android.widget.EditText
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts.PickMultipleVisualMedia
+import android.widget.ImageView
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import android.content.Intent
+import android.app.Activity
+import android.content.ActivityNotFoundException
 
 class UploadPeople : AppCompatActivity() {
+    private val PICK_IMAGE_REQUEST = 1
     private val database = FirebaseDatabase.getInstance()
     private val myRef = database.getReference("users")
+
+    private lateinit var storage: FirebaseStorage
+    private lateinit var storageReference: StorageReference
 
     private lateinit var button: Button
     private lateinit var nameEditText: EditText
     private lateinit var detailEditText: EditText
+    private lateinit var Picture: ImageView
+    private lateinit var PostImg: Button
+
     // Registers a photo picker activity launcher in multi-select mode.
-    // In this example, the app lets the user select up to 10 media files.
-    //private lateinit var pickMultipleMedia: ActivityResultLauncher<Array<String>>
+    private lateinit var pickImageLauncher: ActivityResultLauncher<Uri>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +39,28 @@ class UploadPeople : AppCompatActivity() {
         button = findViewById(R.id.SaveToDatabase)
         nameEditText = findViewById(R.id.Name)
         detailEditText = findViewById(R.id.Details)
-        //Check the Pic thing
-        // Set a click listener for the button
+        Picture = findViewById(R.id.Picture)
+        PostImg = findViewById(R.id.PostImg)
+
+        // Set a click listener for the "Save to Database" button
         button.setOnClickListener {
             saveData()
         }
+        fun pickImageFromGallery() {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            try {
+                startActivityForResult(intent, PICK_IMAGE_REQUEST)
+            } catch (e: ActivityNotFoundException) {
+                // Handle the exception if no activity can handle the intent (e.g., no gallery app)
+            }
+        }
+        // Set a click listener for the "Post Image" button
+        PostImg.setOnClickListener {
+            pickImageFromGallery()
+        }
+
+
     }
 
     private fun saveData() {
@@ -54,8 +83,33 @@ class UploadPeople : AppCompatActivity() {
             }
         }
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK) {
+            val selectedImageUri = data?.data
+            if (selectedImageUri != null) {
+                // Display the selected image in the ImageView
+                Picture.setImageURI(selectedImageUri)
+
+                // Upload the selected image to Firebase Storage
+                val userKey = myRef.push().key
+
+                if (userKey != null) {
+                    val storage = FirebaseStorage.getInstance()
+                    val storageRef = storage.reference
+                    val imagesRef = storageRef.child("images/$userKey.jpg")
+                    val uploadTask = imagesRef.putFile(selectedImageUri)
+
+                    uploadTask.addOnSuccessListener {
+                        // Get the download URL for the uploaded image
+                        imagesRef.downloadUrl.addOnSuccessListener { uri ->
+                            // Save the download URL in the database
+                            myRef.child(userKey).child("imageURL").setValue(uri.toString())
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-
-
-
-
