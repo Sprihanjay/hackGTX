@@ -38,7 +38,7 @@
         android:layout_height="74dp"
         android:backgroundTint="@color/redColor"
         android:fontFamily="sans-serif"
-        android:text="Add Someone You Know"
+        android:text="People You Know"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
