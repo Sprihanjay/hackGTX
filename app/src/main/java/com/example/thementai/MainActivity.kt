@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //for second page
+        //for contact list page
         val button = findViewById<Button>(R.id.buttonAddPeople)
         button.setOnClickListener {
-            openAddPeople()
+            openContactList()
         }
 
         val btnpicture = findViewById<Button>(R.id.TakePicture)
@@ -43,8 +43,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     //second page method call
-    fun openAddPeople() {
-        val intent = Intent(this, UploadPeople::class.java)
+    fun openContactList() {
+        val intent = Intent(this, ContactList::class.java)
         startActivity(intent)
     }
 
