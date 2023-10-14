@@ -66,6 +66,9 @@ dependencies {
         //Gallery Multipicker implementation
         implementation("androidx.activity:activity:1.7.0")
 
+        //Biometric Verification
+        implementation("androidx.biometric:biometric:1.0.0-rc01")
+        implementation("androidx.biometric:biometric:1.2.0-alpha05")
 
     }
 
