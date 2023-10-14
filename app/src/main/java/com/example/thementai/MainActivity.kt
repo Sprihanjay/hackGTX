@@ -24,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //for second page
+        val button = findViewById<Button>(R.id.buttonAddPeople)
+        button.setOnClickListener {
+            openAddPeople()
+        }
+
         val btnpicture = findViewById<Button>(R.id.TakePicture)
         imageView = findViewById<ImageView>(R.id.camera)
 
@@ -34,6 +40,12 @@ class MainActivity : AppCompatActivity() {
                 startCamera()
             }
         }
+    }
+
+    //second page method call
+    fun openAddPeople() {
+        val intent = Intent(this, UploadPeople::class.java)
+        startActivity(intent)
     }
 
     private fun startCamera() {
