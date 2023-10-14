@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ContactList">
 
+    <!-- Add a ScrollView to make the content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/contactContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- This is where your contact cards will be dynamically added -->
+
+        </LinearLayout>
+    </ScrollView>
+
     <Button
         android:id="@+id/buttonAddNew"
         android:layout_width="300dp"
