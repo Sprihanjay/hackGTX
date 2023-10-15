@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/hackGTX">
-    <img src="[images/logo.png](https://lh3.google.com/u/0/d/1PH2S2J6P9ZCRaX4akkQe_L91N2f1ZqrG=w3024-h1550-iv1)" alt="Logo" width="80" height="80">
+    <img src="IdentifAI logo 3.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">IdentifAI</h3>
