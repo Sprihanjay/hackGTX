@@ -15,6 +15,7 @@ import android.content.pm.PackageManager
 import android.hardware.biometrics.BiometricManager.Authenticators.BIOMETRIC_STRONG
 import android.provider.Settings
 import android.util.Log
+import android.widget.TextView
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private val REQUEST_CODE = 22
     private lateinit var imageView: ImageView
+
     private val CAMERA_PERMISSION_REQUEST = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +97,13 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             val photo = data?.extras?.get("data") as Bitmap?
             imageView.setImageBitmap(photo)
+            // Assuming you have references to TextView2 and TextView3
+            val textView2 = findViewById<TextView>(R.id.textView2)
+            val textView3 = findViewById<TextView>(R.id.textView3)
+
+            textView2.text = "The college student who stayed awake for 48 hrs."
+            textView3.text = "Luke"
+
         } else {
             Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
         }
