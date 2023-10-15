@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/hackGTX">
-    <img src="IdentifAI logo 3.png" alt="Logo" width="80" height="80">
+    <img src="IdentifAI logo 3.png" alt="Logo" >
   </a>
 
 <h3 align="center">IdentifAI</h3>
@@ -43,13 +43,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](Login-4.png)
+  <img src="Login-4.png" alt="Logo">
 
-We made an app that helps Alzheimer patient recognize their close ones. Just one click and take their pic and you remember them back. 
+We made an app that helps Alzheimer patient recognize their close ones. Just one click and take their pic and you are provided with info about them. 
 
 A little bit more -- 
-The first time the user uses the app, they can take picture of their close ones and enter their names and little description. From then onwards, it's a smooth sail of never forgetting.
-We use state of the art AWS Recoknization AI that matches face with just one picture. Using firebase to safety store your information, we make like of alzheimer patienr's and those around them way easier.
+The first time the user uses the app, they can take picture of their close ones and enter their names and little description. From then onwards, it's a smooth sail of helping them keep their memories close.
+We use state of the art AWS Rekognization AI so that users can point their camera at someone and IdentifAI will tell the user if they know the person, and if they do, what their name is and a little description. Using Google Firebase to safely store information, we make the lives of Alzheimer's patient's and those around them way more enjoyable and comfortable. We also implemented biometric validation to make sure that all of the stored data is safe and untamperable from untrustworthy people -- as well as so the user does not have to remember a passcode.
 
 
 
