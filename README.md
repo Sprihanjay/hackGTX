@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/hackGTX">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="[images/logo.png](https://lh3.google.com/u/0/d/1PH2S2J6P9ZCRaX4akkQe_L91N2f1ZqrG=w3024-h1550-iv1)" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">IdentifAI</h3>
@@ -96,7 +96,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the Documentation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,15 +140,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
