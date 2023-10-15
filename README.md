@@ -43,7 +43,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](Login-4.png)
 
 We made an app that helps Alzheimer patient recognize their close ones. Just one click and take their pic and you remember them back. 
 
