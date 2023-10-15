@@ -46,18 +46,16 @@
   <img src="Login-4.png" alt="Logo">
 
 
-Inspiration
+## Inspiration
 
 Our inspiration for IdentifAI stemmed from a desire to make a meaningful impact on the lives of Alzheimer's patients and their families. We wanted to create a tool that would help patients recognize their loved ones and retain precious memories effortlessly.
 
-What it does
-
+## What it does
 IdentifAI is an Android app that empowers Alzheimer's patients to identify their close ones swiftly. With just a click, users can capture a photo, and our app provides them with information about the person in the picture.
 
 The initial setup involves users taking pictures of their loved ones and entering their names and brief descriptions. Once this step is complete, IdentifAI utilizes advanced AWS Rekognition AI to allow users to point their camera at someone. The app will then inform the user if it recognizes the person, providing their name and a short description. We ensure the security of this information by using Google Firebase for safe storage. We have also implemented biometric validation to protect data from unauthorized access, eliminating the need to remember a passcode.
 
-How we built it
-
+## How we built it
 Over the course of the hackathon, we undertook the challenge of learning Kotlin and Android Studio from scratch. We leveraged various technologies, including:
 
 Kotlin
@@ -71,12 +69,10 @@ Challenges we ran into
 
 Learning a new programming language and development environment in a short time frame was a significant challenge. We also faced complexities in integrating AWS Rekognition and Firebase to ensure smooth data processing and storage.
 
-Accomplishments that we're proud of
-
+## Accomplishments that we're proud of
 We are proud of creating IdentifAI in just one weekend, overcoming the steep learning curve of Kotlin and Android Studio. Our app has the potential to significantly improve the lives of Alzheimer's patients and their caregivers.
 
-What we learned
-
+## What we learned
 We learned how to develop an Android app using Kotlin, work with AWS services, and utilize biometric validation. Our experience in developing IdentifAI has given us valuable insights into mobile app development and cloud services.
 
 What's next for IdentifAI
