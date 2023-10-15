@@ -19,6 +19,7 @@ class UploadPeople : AppCompatActivity() {
     private val PICK_IMAGE_REQUEST = 1
     private val database = FirebaseDatabase.getInstance()
     private val myRef = database.getReference("users")
+    private var key = myRef.push().key
 
     private lateinit var storage: FirebaseStorage
     private lateinit var storageReference: StorageReference
@@ -45,6 +46,7 @@ class UploadPeople : AppCompatActivity() {
         // Set a click listener for the "Save to Database" button
         button.setOnClickListener {
             saveData()
+            key = myRef.push().key
         }
         fun pickImageFromGallery() {
             val intent = Intent(Intent.ACTION_PICK)
@@ -66,34 +68,35 @@ class UploadPeople : AppCompatActivity() {
     private fun saveData() {
         val name = nameEditText.text.toString()
         val detail = detailEditText.text.toString()
+        val userKey = key
 
         // Check if name and detail are not empty before saving
         if (name.isNotEmpty() && detail.isNotEmpty()) {
-            // Generate a unique key for each user
-            val userKey = myRef.push().key
-
+            // Save name and detail as separate entries
             if (userKey != null) {
-                // Save name and detail as separate entries
                 myRef.child(userKey).child("name").setValue(name)
-                myRef.child(userKey).child("detail").setValue(detail)
-
-                // Clear the EditText fields
-                nameEditText.text.clear()
-                detailEditText.text.clear()
             }
+            if (userKey != null) {
+                myRef.child(userKey).child("detail").setValue(detail)
+            }
+
+            // Clear the EditText fields
+            nameEditText.text.clear()
+            detailEditText.text.clear()
+            Picture.setImageURI(null)
         }
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK) {
             val selectedImageUri = data?.data
             if (selectedImageUri != null) {
-                // Display the selected image in the ImageView
+                //display picture
                 Picture.setImageURI(selectedImageUri)
-
                 // Upload the selected image to Firebase Storage
-                val userKey = myRef.push().key
+                val userKey = key
 
                 if (userKey != null) {
                     val storage = FirebaseStorage.getInstance()
@@ -104,12 +107,15 @@ class UploadPeople : AppCompatActivity() {
                     uploadTask.addOnSuccessListener {
                         // Get the download URL for the uploaded image
                         imagesRef.downloadUrl.addOnSuccessListener { uri ->
-                            // Save the download URL in the database
+                            // Save the download URL in the database and call saveData
                             myRef.child(userKey).child("imageURL").setValue(uri.toString())
+                            saveData()
                         }
                     }
                 }
             }
         }
     }
+
 }
+
