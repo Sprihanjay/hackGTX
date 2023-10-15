@@ -32,33 +32,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        // Lets the user authenticate using either a Class 3 biometric or
-//        // their lock screen credential (PIN, pattern, or password).
-//        val promptInfo = BiometricPrompt.PromptInfo.Builder().apply {
-//            setTitle("Biometric login for my app")
-//            setSubtitle("Log in using your biometric credential")
-//            setNegativeButtonText("Cancel") // Set negative button text here
-//            setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG)
-//        }.build()
-//
-//
-//        val biometricManager = BiometricManager.from(this)
-//        when (biometricManager.canAuthenticate()) {
-//            BiometricManager.BIOMETRIC_SUCCESS ->
-//                Log.d("MY_APP_TAG", "App can authenticate using biometrics.")
-//            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE ->
-//                Log.e("MY_APP_TAG", "No biometric features available on this device.")
-//            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE ->
-//                Log.e("MY_APP_TAG", "Biometric features are currently unavailable.")
-//            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
-//                // Prompts the user to create credentials that your app accepts.
-//                val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
-//                    putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
-//                        BIOMETRIC_STRONG)
-//                }
-//                startActivityForResult(enrollIntent, REQUEST_CODE)
-//            }
-//        }
+        // Lets the user authenticate using either a Class 3 biometric or
+        // their lock screen credential (PIN, pattern, or password).
+        val promptInfo = BiometricPrompt.PromptInfo.Builder().apply {
+            setTitle("Biometric login for my app")
+            setSubtitle("Log in using your biometric credential")
+            setNegativeButtonText("Cancel") // Set negative button text here
+            setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG)
+        }.build()
+
+
+        val biometricManager = BiometricManager.from(this)
+        when (biometricManager.canAuthenticate()) {
+            BiometricManager.BIOMETRIC_SUCCESS ->
+                Log.d("MY_APP_TAG", "App can authenticate using biometrics.")
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE ->
+                Log.e("MY_APP_TAG", "No biometric features available on this device.")
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE ->
+                Log.e("MY_APP_TAG", "Biometric features are currently unavailable.")
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
+                // Prompts the user to create credentials that your app accepts.
+                val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
+                    putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+                        BIOMETRIC_STRONG)
+                }
+                startActivityForResult(enrollIntent, REQUEST_CODE)
+            }
+        }
 
         //for contact list page
         val button = findViewById<Button>(R.id.buttonAddPeople)
