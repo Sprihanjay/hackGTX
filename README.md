@@ -2,12 +2,12 @@
 
 
 <br />
-<div align="center">
+<div align="left">
   <a href="https://github.com/github_username/hackGTX">
     <img src="IdentifAI logo 3.png" alt="Logo" >
   </a>
 
-<h3 align="center">IdentifAI</h3>
+<h3 align="left">IdentifAI</h3>
 
 
 
@@ -45,21 +45,43 @@
 
   <img src="Login-4.png" alt="Logo">
 
-We made an app that helps Alzheimer patient recognize their close ones. Just one click and take their pic and you are provided with info about them. 
 
-A little bit more -- 
-The first time the user uses the app, they can take picture of their close ones and enter their names and little description. From then onwards, it's a smooth sail of helping them keep their memories close.
-We use state of the art AWS Rekognization AI so that users can point their camera at someone and IdentifAI will tell the user if they know the person, and if they do, what their name is and a little description. Using Google Firebase to safely store information, we make the lives of Alzheimer's patient's and those around them way more enjoyable and comfortable. We also implemented biometric validation to make sure that all of the stored data is safe and untamperable from untrustworthy people -- as well as so the user does not have to remember a passcode.
+Inspiration
 
+Our inspiration for IdentifAI stemmed from a desire to make a meaningful impact on the lives of Alzheimer's patients and their families. We wanted to create a tool that would help patients recognize their loved ones and retain precious memories effortlessly.
 
+What it does
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+IdentifAI is an Android app that empowers Alzheimer's patients to identify their close ones swiftly. With just a click, users can capture a photo, and our app provides them with information about the person in the picture.
 
+The initial setup involves users taking pictures of their loved ones and entering their names and brief descriptions. Once this step is complete, IdentifAI utilizes advanced AWS Rekognition AI to allow users to point their camera at someone. The app will then inform the user if it recognizes the person, providing their name and a short description. We ensure the security of this information by using Google Firebase for safe storage. We have also implemented biometric validation to protect data from unauthorized access, eliminating the need to remember a passcode.
 
+How we built it
 
-### Built With
+Over the course of the hackathon, we undertook the challenge of learning Kotlin and Android Studio from scratch. We leveraged various technologies, including:
 
-Kotlin, Android Studio, Firebase, AWS Services
+Kotlin
+Android Studio
+Firebase
+Amazon Web Services (AWS)
+Fingerprint API
+Gallery Picker API
+AWS Rekognition API
+Challenges we ran into
+
+Learning a new programming language and development environment in a short time frame was a significant challenge. We also faced complexities in integrating AWS Rekognition and Firebase to ensure smooth data processing and storage.
+
+Accomplishments that we're proud of
+
+We are proud of creating IdentifAI in just one weekend, overcoming the steep learning curve of Kotlin and Android Studio. Our app has the potential to significantly improve the lives of Alzheimer's patients and their caregivers.
+
+What we learned
+
+We learned how to develop an Android app using Kotlin, work with AWS services, and utilize biometric validation. Our experience in developing IdentifAI has given us valuable insights into mobile app development and cloud services.
+
+What's next for IdentifAI
+
+In the future, we aim to refine IdentifAI by expanding the usability of the app, ease of access, and implementing further features to help improve the lives of those who suffer from memory loss.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -107,24 +129,6 @@ This is an example of how to list things you need to use the software and how to
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
@@ -134,14 +138,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* [Luke Hartzell](https://github.com/LukeHartzell1)
-* [Green Atkinson](https://github.com/Green-atkinson)
-
+* [John Atkinson](https://github.com/Green-atkinson) - Frontend, Figma Mockup
+* [Luke Hartzell](https://github.com/LukeHartzell1) - Backend, Presentation, Integration to Frontend
+* [Sprihanjay Banik](https://github.com/Sprihanjay) - Backend, Integration to Frontend
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
