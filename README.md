@@ -44,6 +44,7 @@
 ## About The Project
 
   <img src="Login-4.png" alt="Logo">
+  <a href = "https://www.youtube.com/watch?v=IKsSfN8OJ2o">Link to Video</a>
 
 
 ## Inspiration
